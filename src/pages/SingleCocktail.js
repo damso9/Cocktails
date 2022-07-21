@@ -11,7 +11,7 @@ const SingleCocktail = () => {
     const response = await fetch(url + Id);
     const data = await response.json();
     console.log(data.drinks[0]);
-    setSingleCocktail(data.drinks[0])
+    setSingleCocktail(data.drinks[0]);
   };
   useEffect(() => {
     getSingleCocktail();
@@ -19,12 +19,21 @@ const SingleCocktail = () => {
   if (!singleCocktail) {
     return <Loading />;
   }
-  const { strDrink, strCategory,strAlcoholic, strGlass,strInstructions, strIngredient1,strIngredient2,strIngredient3 , strDrinkThumb} = singleCocktail
+  const {
+    strDrink,
+    strCategory,
+    strAlcoholic,
+    strGlass,
+    strInstructions,
+    strIngredient1,
+    strIngredient2,
+    strIngredient3,
+    strDrinkThumb,
+  } = singleCocktail;
 
   return (
     <>
       {singleCocktail && (
-        
         <section className="section cocktail-section">
           <Link to={"/"} className="btn btn-primary">
             back home
@@ -34,19 +43,24 @@ const SingleCocktail = () => {
             <img src={strDrinkThumb} alt={strDrink} />
             <div className="drink-info">
               <p>
-                <span className="drink-data">name :</span>{strDrink}
+                <span className="drink-data">name :</span>
+                {strDrink}
               </p>
               <p>
-                <span className="drink-data">Category :</span>{strCategory}
+                <span className="drink-data">Category :</span>
+                {strCategory}
               </p>
               <p>
-                <span className="drink-data">Info :</span>{strAlcoholic}
+                <span className="drink-data">Info :</span>
+                {strAlcoholic}
               </p>
               <p>
-                <span className="drink-data">Glass :</span>{strGlass}
+                <span className="drink-data">Glass :</span>
+                {strGlass}
               </p>
               <p>
-                <span className="drink-data">Instuctions :</span>{strInstructions}
+                <span className="drink-data">Instuctions :</span>
+                {strInstructions}
               </p>
               <p>
                 <span className="drink-data">Ingredients :</span>
