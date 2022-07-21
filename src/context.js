@@ -42,7 +42,7 @@ const AppProvider = ({ children }) => {
     getNewCocktails();
   }, [cocktailInput]);
 
-  useEffect(() => {});
+
   return (
     <AppContext.Provider
       value={{

@@ -15,7 +15,7 @@ const SingleCocktail = () => {
   };
   useEffect(() => {
     getSingleCocktail();
-  });
+  }, []);
   if (!singleCocktail) {
     return <Loading />;
   }
