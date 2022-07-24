@@ -9,9 +9,13 @@ const SearchForm = () => {
     setCocktailInput(e.target.value)
 
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
   return (
     <section className="section search">
-      <form className="search-form">
+      <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="name">Search your favorite cocktail</label>
           <input type="text" id="name" name="name" value={cocktailInput} onChange={handleChange}/>
